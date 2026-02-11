@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Booking Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!----------Header------------->
+<header class="navbar">
+    <div class="logo">Sahoo Royals</div>
+    <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#food">Food</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="javascript:void(0)" onclick="openForm()">Book Now</a></li>
+</ul>
+<!-- Menu -->
+<div class="menu-icon" id="menuIcon">
+    <i class="fas fa-bars"></i>
+</div>
+
+</header>
+
+
+<!---------Hero section----------->
+<section class="hero" id="home">
+    <div class="hero-content">
+    <h1><b>Welcome to Sahoo Royals</b></h1>
+    <p><h3>Experience comfort and luxury!</h3></p>
+</div>
+</section>
+
+<!-----------About----------->
+<section class="about" id="about">
+    <h2>About Our Hotel</h2>
+    <p class="about-text">
+    At Sahoo Royalsa Hotel, we offer a perfect blend of luxury, comfort, and world-class hospitality.
+    Located in the heart of the city. Our hotel is designed to give you a peaceful and memorable stay
+    with premium rooms, fine dining, and exceptional service.
+</p>
+<div class="features">
+    <div class="feature-box">🌟 Luxury Rooms</div>
+    <div class="feature-box">🍽️ Fine Dining</div>
+    <div class="feature-box">🏊 Swimming Pool</div>
+    <div class="feature-box">💆 Spa & Wellness</div>
+    <div class="feature-box">🚗 Free Parking</div>
+    <div class="feature-box">📶 Free Wi-Fi</div>
+    <div class="feature-box">🏋️ Fitness Center</div>
+    <div class="feature-box">🛎️ 24/7 Concierge</div>
+</div>
+</section>
+
+<!-----------Food----------->
+<section class="food" id="food">
+    <h2>Our Dining Experience</h2>
+    <p class="food-text">
+    Indulge in our exquisite culinary offerings, crafted by world-class chefs using the finest ingredients.
+    From traditional delicacies to international cuisines, our restaurants provide an unforgettable dining experience.
+</p>
+<div class="menu-items">
+    <div class="menu-item">
+        <img src="assets/img5.jpg" alt="Grilled Chicken">
+        <h3>Grilled Chicken</h3>
+        <p>Tender grilled chicken marinated in herbs and spices, served with roasted vegetables and mashed potatoes.</p>
+        <span>₹800</span>
+    </div>
+    <div class="menu-item">
+        <img src="assets/img6.jpg" alt="Pasta Dish">
+        <h3>Italian Pasta</h3>
+        <p>Authentic Italian pasta with fresh tomatoes, basil, and parmesan cheese in a light olive oil sauce.</p>
+        <span>₹700</span>
+    </div>
+    <div class="menu-item">
+        <img src="assets/img8.jpg" alt="Burger">
+        <h3>Gourmet Burger</h3>
+        <p>Juicy beef patty with lettuce, tomato, cheese, and special sauce on a toasted bun.</p>
+        <span>₹600</span>
+    </div>
+    <div class="menu-item">
+        <img src="assets/img7.jpg" alt="Salad">
+        <h3>Fresh Salad</h3>
+        <p>Mixed greens with cherry tomatoes, cucumbers, feta cheese, and balsamic vinaigrette.</p>
+        <span>₹500</span>
+    </div>
+    <div class="menu-item">
+        <img src="assets/img9.jpg" alt="pao bhaji">
+        <h3>Pao Bhaji</h3>
+        <p>Soft bread rolls filled with spiced vegetable curry and served with a side of chutney.</p>
+        <span>₹400</span>
+    </div>
+</div>
+</section>
+
+
+<!-------ROOMS---------------------->
+<section class="luxury-rooms" id="rooms">
+    <div class="rooms-heading">
+    <h2>Book Your Luxury Stay</h2>
+    <p>Choose from our premium rooms and suites designed for your comfort</p>
+</div>
+
+<section class="rooms">
+    <div class="room-card">
+    <img src="assets/img1.jpg" alt="Room">
+    <h3>Deluxe Room</h3>
+    <p>₹3500 / night</p>
+    <button onclick="openForm('Deluxe Room')">Book Now</button>
+
+</div>
+<div class="room-card">
+    <img src="assets/img2.jpg" alt="Room">
+    <h3>Luxury Suite</h3>
+    <p>₹6000 / night</p>
+    <button onclick="openForm('Luxury Room')">Book Now</button>
+
+</div>
+<div class="room-card">
+    <img src="assets/img3.jpg" alt="Room">
+    <h3>Standard Room</h3>
+    <p>₹2500 / night</p>
+    <button onclick="openForm('Standard Room')">Book Now</button>
+</div>
+<div class="room-card">
+    <img src="assets/img14.jpg" alt="Luxury Room">
+    <h3>Premium Luxury Room</h3>
+    <p>₹4500 / night</p>
+    <button onclick="openForm('Luxury Suite')">Book Now</button>
+
+</div>
+
+<div class="room-card">
+    <img src="assets/img13.jpg" alt="Royal Suite">
+    <h3>Royal Suite</h3>
+    <p>₹8500 / night</p>
+    <button onclick="openForm('Royal Suite')">Book Now</button>
+</div>
+
+<div class="room-card">
+    <img src="assets/img12.jpg" alt="Executive Suite">
+    <h3>Executive Suite</h3>
+    <p>₹7000 / night</p>
+    <button onclick="openForm('Executive Suite')">Book Now</button>
+</div>
+</section>
+
+<!-- Booking Form Modal -->
+<div class="modal" id="bookingModal">
+    <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <h2>Book Your Stay</h2>
+
+    <form id="bookingForm">
+        <label>Room Type</label>
+        <select id="roomType" required>
+        <option value="">Select Room</option>
+        <option value="Deluxe Room">Deluxe Room</option>
+        <option value="Premium Luxury Room">Premium Luxury Room</option>
+        <option value="Standard Room">Standard Room</option>
+        <option value="Luxury Suite">Luxury Suite</option>
+        <option value="Royal Suite">Royal Suite</option>
+        <option value="Executive Suit">Presidential Suite</option>
+    </select>
+    <label>Check-in Date</label>
+    <input type="date" id="checkin" required>
+    <label>Check-out Date</label>
+    <input type="date" id="checkout" required>
+    <label>Guests</label>
+    <select id="guests" required>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+    </select>
+    <label>Email Address</label>
+    <input type="email" id="email" placeholder="example@gmail.com" required>
+    <label>Payment Method</label>
+    <select id="payment" required>
+    <option value="">Select Payment Method</option>
+    <option>UPI</option>
+    <option>Credit Card</option>
+    <option>Debit Card</option>
+    <option>Net Banking</option>
+    <option>Pay at Hotel</option>
+</select>
+
+    <label>Special Requests</label>
+    <textarea placeholder="Any special requests..."></textarea>
+    <button type="submit">Confirm Booking</button>
+    </form>
+</div>
+</div>
+
+<!-----------Footer---------->
+
+<footer class="footer" id="contact">
+    <div class="footer-container">
+
+    <div class="footer-about">
+        <h3>Sahoo Royals</h3>
+        <p>
+        Experience luxury, comfort, and world-class hospitality.
+        Your perfect stay begins with us.
+    </p>
+    </div>
+
+    <div class="footer-contact" id="Contact">
+        <h4>Contact</h4>
+        <p>📍 Cuttack, Odisha</p>
+        <p>📞 +91 8093373363</p>
+        <p>✉️ info@sahoo-royals.com</p>
+    </div>
+
+    <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+<div class="footer-bottom">
+    <p>© 2026 Sahoo Royals. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("bookingModal");
+        const bookingForm = document.getElementById("bookingForm");
+        const roomType = document.getElementById("roomType");
+        const checkin = document.getElementById("checkin");
+        const checkout = document.getElementById("checkout");
+        window.openForm = function (room = "") {
+    modal.style.display = "block";
+    if (room) {
+        roomType.value = room;
+    }
+};
+window.closeForm = function () {
+    modal.style.display = "none";
+};
+const today = new Date().toISOString().split("T")[0];
+checkin.min = today;
+checkin.addEventListener("change", function () {
+    checkout.min = this.value;
+    checkout.value = "";
+});
+
+bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (new Date(checkout.value) <= new Date(checkin.value)) {
+        alert("Check-out date must be after check-in date.");
+        return;
+    }
+
+    alert("🎉 Booking confirmed successfully!");
+    bookingForm.reset();
+    closeForm();
+});
+window.addEventListener("click", function (e) {
+    if (e.target === modal) {
+        closeForm();
+    }
+});
+
+
+
+const menuIcon = document.getElementById("menuIcon");
+const navLinks = document.getElementById("navLinks");
+menuIcon.addEventListener("click", function () {
+    navLinks.classList.toggle("active");
+
+    const icon = menuIcon.querySelector("i");
+    if (navLinks.classList.contains("active")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+    } else {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+    }
+});
+navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        const icon = menuIcon.querySelector("i");
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+    });
+});
+
+});
+</script>
+</body>
+</html>
