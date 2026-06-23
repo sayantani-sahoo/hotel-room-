@@ -103,7 +103,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Hotel**: Sahoo Royals
 - **Location**: Cuttack, Odisha
-- **Phone**: +91 8093373363
 - **Email**: info@sahoo-royals.com
 
 ---
